@@ -1,6 +1,6 @@
 # RestCalculator
 
-web service for learning and testing REST remote procedures
+The web service for learning and testing REST remote procedures.
 
 Сервис для изучения и тестирования удалённых процедур через REST.
 Данный микросервис выполняет роль простого калькулятора.
@@ -12,7 +12,7 @@ web service for learning and testing REST remote procedures
 
  <b>/calculate</b> - собственно сам калькулятор. Дальнейшее описание касается только /calculate.
 
-##Входные данные 
+<h3>Входные данные</h3> 
 На вход подаются 3 аргумента: <b>action</b> (действие), <b>value1</b> (число 1) и <b>value2</b> (число 2).<br>
 Есть 4 значения аргумента action:<br>
 addition - сложение<br>
@@ -34,16 +34,16 @@ http://localhost:8080/calculate?action=multiplication&value1=2&value2=4
 Важно, чтобы были запятые при перечислении полей и кавычки для строковых типов.
 Посылать Post-запрос можно через Postmap или SoapUI.
 
-##Выходные данные
+<h3>Выходные данные</h3>
 На выходе получаем следующий JSON-объект (пример умножения 2 * 4):<br>
 {<br>
     "status": "OK",<br>
     "message": "Action is multiplication",<br>
     "calcResult": 8<br>
 }<br>
-status - http-статус ответа сервера. Посмотреть числовой код ответа в SoapUI можно на вкладке raw.<br>
-message - сообщение пользователю. В случае успешного вычисления - наименование действия, в случае неуспешного - сообщение об ошибке<br>
-calcResult - результат вычисления.<br>
+<b>status</b> - http-статус ответа сервера. Посмотреть числовой код ответа в SoapUI можно на вкладке raw.<br>
+<b>message</b> - сообщение пользователю. В случае успешного вычисления - наименование действия, в случае неуспешного - сообщение об ошибке<br>
+<b>calcResult</b> - результат вычисления.<br>
 Пример ответа с сообщением об ошибке (деление на ноль):<br>
 {<br>
     "status": "METHOD_NOT_ALLOWED",<br>
