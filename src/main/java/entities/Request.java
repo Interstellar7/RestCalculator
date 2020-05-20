@@ -2,8 +2,8 @@ package entities;
 
 public class Request {
     private String action;
-    private double value1;
-    private double value2;
+    private String value1;
+    private String value2;
 
     public Request() {
     }
@@ -16,19 +16,19 @@ public class Request {
         this.action = action;
     }
 
-    public double getValue1() {
+    public String getValue1() {
         return value1;
     }
 
-    public void setValue1(double value1) {
+    public void setValue1(String value1) {
         this.value1 = value1;
     }
 
-    public double getValue2() {
+    public String getValue2() {
         return value2;
     }
 
-    public void setValue2(double value2) {
+    public void setValue2(String value2) {
         this.value2 = value2;
     }
 }

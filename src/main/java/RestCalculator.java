@@ -6,11 +6,13 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {
         "services",
         "controllers",
-        "entities"
+        "entities",
+        "utils"
 })
 public class RestCalculator {
 
     public static void main(String[] args) {
+
         SpringApplication.run(RestCalculator.class);
     }
 }

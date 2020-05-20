@@ -1,13 +1,27 @@
 package services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ServiceImpl implements IService{
 
+    private final int numbersAfterComa;
+
+    @Autowired
+    public ServiceImpl(@Value("${numbersAfterComa}") int numbersAfterComa) {
+        this.numbersAfterComa = numbersAfterComa;
+    }
+
+    @Override
+    public int getNumbersAfterComa() {
+        return numbersAfterComa;
+    }
+
     @Override
     public String sayHello(String name) {
-        return "Hello, " + name + "! Best Rest-Calculator greetings you!";
+        return "Hello, " + name + "! The best Rest-Calculator greetings you!";
     }
 
     @Override
