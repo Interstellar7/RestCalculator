@@ -6,7 +6,7 @@ The web service for learning and testing REST remote procedures.
 Данный микросервис выполняет роль простого калькулятора.
 
 Упакованный jar файл находится с папке build\libs\RestCalculator-1.0-SNAPSHOT.jar <br>
-Генерируется он терминальной командой gradlew bootRun. <br>
+Генерируется он терминальной командой gradlew build (запуск - gradlew bootRun, выбор пакета: gradlew bootJar или gradlew bootWar). <br>
 Никаких дополнительных файлов для запуска не требуется, только настроенная Java. 
 
 <h2>Работа сервиса</h2>
