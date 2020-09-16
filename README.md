@@ -11,7 +11,7 @@ The web service for learning and testing REST remote procedures.
 
 <h2>Работа сервиса</h2>
 
-Есть 2 рабочих URI:
+Есть 2 рабочих Endpoint:
 
  <b>/hello</b> с параметром name (можно без параметра). Выполняется через GET-запрос. Это просто функция приветствия по имени. В результате получаем текстовую строку приветствия.
 Пример: http://localhost:8080/hello?name=Bill%20Gates <br>
@@ -38,7 +38,7 @@ http://localhost:8080/calculate?action=multiplication&value1=2&value2=4
     "value2": 4.56<br>
 }<br>
 Важно, чтобы были запятые при перечислении полей и кавычки для строковых типов.
-Посылать Post-запрос можно через Postmap или SoapUI.
+Посылать Post-запрос можно через Postman или SoapUI.
 
 <h4>Выходные данные</h4>
 На выходе получаем следующий JSON-объект (пример умножения 2 * 4):<br>
